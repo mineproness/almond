@@ -3,7 +3,6 @@ channels:
   - conda-forge
 dependencies:
   - openjdk=11
-  - coursier
   - pip
   - pip:
       - notebook
