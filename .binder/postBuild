@@ -1,6 +1,12 @@
 #!/bin/bash
-# Install coursier manually
-curl -fLo cs https://git.io/coursier-cli && chmod +x cs && ./cs install --install-dir /usr/local/bin almond --only-prebuilt
 
-# Install Almond kernel
-/usr/local/bin/almond --install
+# Install coursier
+curl -fLo cs https://git.io/coursier-cli
+chmod +x cs
+./cs install almond --only-prebuilt --install-dir /home/jovyan/.local/bin
+
+# Add Almond to PATH for future sessions (optional)
+echo 'export PATH="/home/jovyan/.local/bin:$PATH"' >> ~/.bashrc
+
+# Install the Almond kernel
+/home/jovyan/.local/bin/almond --install
