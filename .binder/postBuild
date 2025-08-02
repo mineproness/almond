@@ -1,1 +1,6 @@
-coursier launch --fork almond -- --install
+#!/bin/bash
+# Install coursier manually
+curl -fLo cs https://git.io/coursier-cli && chmod +x cs && ./cs install --install-dir /usr/local/bin almond --only-prebuilt
+
+# Install Almond kernel
+/usr/local/bin/almond --install
